@@ -1,9 +1,8 @@
 import React from "react";
-import Jumbotron from "./components/jumbotron";
-import JumboData from './fixtures/jumbo';
+import {Jumbotron} from "../components/jumbotron/index";
+import JumboData from '../fixtures/jumbo';
 
-console.log(JumboData)
-const App = () => {
+export const JumbotronContainer = () => {
   return (
     <Jumbotron.Container>
       {JumboData.map(item => {
@@ -22,5 +21,3 @@ const App = () => {
     </Jumbotron.Container>
   )
 }
-
-export default App;
