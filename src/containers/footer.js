@@ -5,7 +5,7 @@ export function FooterContainer({...restProps}) {
   return (
     <Footer {...restProps}>
       <Footer.Container>Questions? Contact us.</Footer.Container>
-      <Footer.Break></Footer.Break>
+      <Footer.Break />
       <Footer.Row>
 
         <Footer.Column>
@@ -39,7 +39,7 @@ export function FooterContainer({...restProps}) {
 
       </Footer.Row>
 
-      <Footer.Break></Footer.Break>
+      <Footer.Break />
       <Footer.Text>Netflix Ukraine</Footer.Text>
     </Footer>
   )
