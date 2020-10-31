@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as Routes from './constants/routes';
 import { Home, Browse, SignIn, SignUp }  from "./pages";

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import faqs from '../fixtures/faqs.json'
 import Accordion from '../components/accordion'
-import OptForm from "../components/opt-form";
+import OptForm from '../components/opt-form';
 
 export const FaqsContainer = () => {
   return (
