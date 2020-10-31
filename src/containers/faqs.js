@@ -1,6 +1,7 @@
 import React from "react";
 import faqs from '../fixtures/faqs.json'
 import Accordion from '../components/accordion'
+import OptForm from "../components/opt-form";
 
 export const FaqsContainer = () => {
   return (
@@ -8,12 +9,19 @@ export const FaqsContainer = () => {
       <Accordion.Title>Frequently Asked Questions</Accordion.Title>
       {faqs.map(item => {
         return (
-          <Accordion.Item key={item.id}>
-            <Accordion.Header>{item.header}</Accordion.Header>
-            <Accordion.Body>{item.body}</Accordion.Body>
+          <Accordion.Item key={ item.id }>
+            <Accordion.Header>{ item.header }</Accordion.Header>
+            <Accordion.Body>{ item.body }</Accordion.Body>
           </Accordion.Item>
         )
       })}
+      <OptForm>
+        <OptForm.Input placeholder='Email address' />
+        <OptForm.Button>Try it now</OptForm.Button>
+        <OptForm.Text>
+          Ready to watch ? Enter your email to create or restart your membership.
+        </OptForm.Text>
+      </OptForm>
     </Accordion>
   )
 }

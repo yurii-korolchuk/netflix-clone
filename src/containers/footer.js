@@ -1,9 +1,9 @@
 import React from "react";
 import Footer from "../components/footer";
 
-export function FooterContainer({...restProps}) {
+export function FooterContainer({ ...restProps }) {
   return (
-    <Footer {...restProps}>
+    <Footer { ...restProps }>
       <Footer.Container>Questions? Contact us.</Footer.Container>
       <Footer.Break />
       <Footer.Row>
