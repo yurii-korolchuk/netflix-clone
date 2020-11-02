@@ -3,7 +3,7 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const Container = styled.div``;
 
-export const Base = styled.div``;
+export const Base = styled.form``;
 
 export const Error = styled.div``;
 
