@@ -1,31 +1,27 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
+// import { FirebaseContext } from '../context/firebase';
 import HeaderContainer from '../containers/header';
 import FooterContainer from '../containers/footer';
 import Form from '../components/form';
 
 export default function SignIn() {
-  const [emailAddress, setEmailAddress] = useState();
-  const [password, setPassword] = useState();
+  const [emailAddress, setEmailAddress] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  const isInvalid = password === '' || emailAddress === '' || password.length < 8;
 
-  /*
-  * TODO
-  * FINISH SIGNIN STYLE
-  * FINISH SIGIN TEXT
-  */
+  const handleSignIn = (event) => {
+    event.preventDefault();
+  }
 
-
-
-  const isInvalid = () => {};
-  const handleSignin = () => {};
   return (
     <>
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
           { error && <Form.Error></Form.Error>}
-          <Form.Base onSubmit={handleSignin} method="POST">
+          <Form.Base onSubmit={ handleSignIn } method="POST">
             <Form.Input placeholder="Email address"
                         value={emailAddress}
                         onChange={({ target }) => setEmailAddress(target.value)}
@@ -36,19 +32,18 @@ export default function SignIn() {
                         value={password}
                         onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInvalid } type="submit">
+            <Form.Submit disabled={ isInvalid } type="submit">
               Sign In
             </Form.Submit>
           </Form.Base>
 
-          <Form.Text>
-            Temp
-          </Form.Text>
-          <Form.Text>
-            Temp
-          </Form.Text>
+          <Form.TextContainer >
+            <Form.Text>New to Netflix?</Form.Text>
+            <Form.Link to='/signup'>Sign up now.</Form.Link>
+          </Form.TextContainer>
+
           <Form.TextSmall>
-            Temp
+            This page is protected by Google reCaptcha to ensure you're not a bot. Learn more.
           </Form.TextSmall>
 
         </Form>
