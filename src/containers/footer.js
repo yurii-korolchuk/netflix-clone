@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/footer';
 
-export function FooterContainer({ ...restProps }) {
+export default function FooterContainer({ ...restProps }) {
   return (
     <Footer { ...restProps }>
       <Footer.Container>Questions? Contact us.</Footer.Container>
