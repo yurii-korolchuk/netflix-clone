@@ -7,13 +7,15 @@ import Form from '../components/form';
 import * as ROUTES from '../constants/routes';
 
 export default function SignIn() {
-  const history = useHistory();
+
+  const history = useHistory()
   const { firebase } = useContext(FirebaseContext)
+
   const [emailAddress, setEmailAddress] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
-  const isInvalid = password === '' || emailAddress === '' || password.length < 8;
+  const isInvalid = password === '' || emailAddress === '' || password.length < 8
 
   const handleSignIn = (event) => {
     event.preventDefault()
