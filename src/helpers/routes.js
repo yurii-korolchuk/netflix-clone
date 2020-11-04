@@ -15,3 +15,15 @@ export const IsUserRedirect = ({ user, loggedInPath, children, ...rest }) => {
     />
   )
 }
+
+export const ProtectedRoute  = ({ user, children, ...rest }) => {
+  return (
+    <Route { ...rest } render={({ location }) => {
+      if (user) {
+        return children
+      } else {
+        return <Redirect to={{ pathname: 'signin', state: { from: location } }} />
+      }
+    }} />
+  )
+}
