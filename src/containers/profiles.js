@@ -3,6 +3,7 @@ import Header from '../components/header/index';
 import { BrowserRouter } from 'react-router-dom';
 import * as Routes from '../constants/routes';
 import logo from '../logo.svg'
+import Profiles from '../components/profiles';
 
 export default function SelectProfileContainer({ user, setProfile }) {
   return (
@@ -17,7 +18,7 @@ export default function SelectProfileContainer({ user, setProfile }) {
         <Profiles.Title> Who's watching ?</Profiles.Title>
         <Profiles.List>
           <Profiles.User>
-            <Profiles.Picture src={user.photoURL}/>
+            <Profiles.Picture src={ user.photoURL }/>
             <Profiles.Name>{ user.displayName }</Profiles.Name>
           </Profiles.User>
         </Profiles.List>
